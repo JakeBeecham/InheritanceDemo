@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float Speed = 2;
+    public float Speed = 5;
 
     //sets the velocity of the bullet
     public void SetDirection(Vector2 direction)

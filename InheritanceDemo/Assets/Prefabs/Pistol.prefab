@@ -58,7 +58,7 @@ MonoBehaviour:
   MaxReserves: 100
   AmmoPerShot: 0
   IsAutomatic: 0
-  BulletPrefab: {fileID: 1331524202132534, guid: 711784da3178ede429c6306d2710c260,
+  BulletPrefab: {fileID: 1331524202132534, guid: 5ea6e46b6e00afb4b9a78c6eab100f66,
     type: 2}
 --- !u!212 &212011475217148838
 SpriteRenderer:

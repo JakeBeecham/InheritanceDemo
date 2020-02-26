@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Weapon activeWeapon;
+    public Transform AttachPoint;
 
 	void Start ()
     {
         activeWeapon = Instantiate(activeWeapon, transform);
-        activeWeapon.transform.position = transform.position;
+        activeWeapon.transform.position = AttachPoint.position;
 	}
 	
 	void Update ()
@@ -19,10 +20,10 @@ public class PlayerAttack : MonoBehaviour
         {
             if (activeWeapon.IsAutomatic)
             {
-                if (Input.GetButtonDown("Fire1"))//left mouse button and right controller trigger
+                if (Input.GetButton("Fire1"))//left mouse button and right controller trigger
                 {
                     if (activeWeapon.HasAmmo())
-                        activeWeapon.Fire(transform.position);
+                        activeWeapon.Fire(AttachPoint.position);
                 }
             }
             else
@@ -30,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
                 if (Input.GetButtonDown("Fire1"))//left mouse button and right controller trigger
                 {
                     if (activeWeapon.HasAmmo())
-                        activeWeapon.Fire(transform.position);
+                        activeWeapon.Fire(AttachPoint.position);
                 }
             }
         }
